@@ -512,7 +512,7 @@ if st.session_state.show_math_question:
     st.sidebar.markdown("#### 回答以下数学问题以获取微信二维码。")
     
     # 设计一个简单的数学问题
-    math_question = "小狗波粒藏了一些苹果在狗窝里，有天晚上波粒偷偷吃掉3个后，发现还剩下7个苹果。请问波粒最初有多少个苹果藏在了狗窝？"
+    math_question = "小狗波粒偷藏了苹果在狗窝里，有天晚上波粒偷偷吃掉3个苹果后，发现还剩下7个苹果。请问波粒最初把多少个苹果藏在了狗窝？"
     st.sidebar.write(math_question)
     
     user_answer = st.sidebar.number_input("请输入你的答案", min_value=0, step=1, key="math_answer")
@@ -533,7 +533,7 @@ if st.session_state.show_math_question:
             else:
                 st.sidebar.error("回答错误！这是另一张可爱的小狗图片：")
                 # 显示错误图片
-                dog_error_path = "./images/dog_error.png"  # 使用本地路径
+                dog_error_path = "./images/dog_error.jpg"  # 使用本地路径
                 st.sidebar.image(dog_error_path, caption="再试一次吧~", use_container_width=False)
                 st.session_state.math_correct = False
                 st.session_state.math_question_answered = True
