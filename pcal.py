@@ -175,7 +175,7 @@ def group_consecutive_dates(dates_with_info: List[Dict]) -> List[dict]:
     return grouped
 
 # 增加垂直空白
-st.markdown("<br><br>", unsafe_allow_html=True)
+st.markdown("<br>", unsafe_allow_html=True)
 
 # 设置关闭周期的标题
 st.header("🛑 Planning Calendar 设置")
